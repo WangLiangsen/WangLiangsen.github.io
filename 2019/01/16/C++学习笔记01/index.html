@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>C++入门教程01 | iScenery | 岁月漫长 要心地善良</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="C++,入门教程">
+    <meta name="description" content="开始学习C++关于C++的源文件C++的源代码(Source Code)文件扩展名为.C 或者.cpp Windows上的编译器Compile 对打开文件中的代码进行编译 Build 和  Make 编译项目中所有源代码文件，如果只有一个被修改则只编译一个 Build All 重新编译所有源代码文件的代码 Link 组合源代码和库代码 Run 或 Execute 运行程序（自动完成上述步骤） De">
+<meta name="keywords" content="C++,入门教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++入门教程01">
+<meta property="og:url" content="WangLiangsen.github.io/2019/01/16/C++学习笔记01/index.html">
+<meta property="og:site_name" content="iScenery">
+<meta property="og:description" content="开始学习C++关于C++的源文件C++的源代码(Source Code)文件扩展名为.C 或者.cpp Windows上的编译器Compile 对打开文件中的代码进行编译 Build 和  Make 编译项目中所有源代码文件，如果只有一个被修改则只编译一个 Build All 重新编译所有源代码文件的代码 Link 组合源代码和库代码 Run 或 Execute 运行程序（自动完成上述步骤） De">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-01-16T07:18:59.259Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C++入门教程01">
+<meta name="twitter:description" content="开始学习C++关于C++的源文件C++的源代码(Source Code)文件扩展名为.C 或者.cpp Windows上的编译器Compile 对打开文件中的代码进行编译 Build 和  Make 编译项目中所有源代码文件，如果只有一个被修改则只编译一个 Build All 重新编译所有源代码文件的代码 Link 组合源代码和库代码 Run 或 Execute 运行程序（自动完成上述步骤） De">
+    
+        <link rel="alternate" type="application/atom+xml" title="iScenery" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Scenery</h5>
+          <a href="mailto:wangliangsen@outlook.com" title="wangliangsen@outlook.com" class="mail">wangliangsen@outlook.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/">
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories">
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags">
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://music.163.com/#/user/home?id=266630369" target="_blank">
+                <i class="icon icon-lg icon-music"></i>
+                音乐
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives">
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/wangliangsen" target="_blank">
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/5594662742/" target="_blank">
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">C++入门教程01</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">C++入门教程01</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-01-16T07:11:19.388Z" itemprop="datePublished" class="page-time">
+  2019-01-16
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/">学习笔记</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/C-学习笔记/">C++学习笔记</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#开始学习C"><span class="post-toc-number">1.</span> <span class="post-toc-text">开始学习C++</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#关于C-的源文件"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">关于C++的源文件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Windows上的编译器"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Windows上的编译器</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Tips"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Tips</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#C-基础语法"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">C++基础语法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cin-和-cout"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">cin 和 cout</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#声明、赋值以及函数的概念"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">声明、赋值以及函数的概念</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#声明语句"><span class="post-toc-number">1.6.1.</span> <span class="post-toc-text">声明语句</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#赋值语句"><span class="post-toc-number">1.6.2.</span> <span class="post-toc-text">赋值语句</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#函数的概念"><span class="post-toc-number">1.6.3.</span> <span class="post-toc-text">函数的概念</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-C++学习笔记01" class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">C++入门教程01</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-01-16 15:11:19" datetime="2019-01-16T07:11:19.388Z" itemprop="datePublished">2019-01-16</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/">学习笔记</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/C-学习笔记/">C++学习笔记</a></li></ul></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="开始学习C"><a href="#开始学习C" class="headerlink" title="开始学习C++"></a>开始学习C++</h1><h2 id="关于C-的源文件"><a href="#关于C-的源文件" class="headerlink" title="关于C++的源文件"></a>关于C++的源文件</h2><p>C++的源代码(Source Code)文件扩展名为.C 或者.cpp</p>
+<h2 id="Windows上的编译器"><a href="#Windows上的编译器" class="headerlink" title="Windows上的编译器"></a>Windows上的编译器</h2><p><em>Compile</em> 对打开文件中的代码进行编译</p>
+<p><em>Build</em> 和  <em>Make</em> 编译项目中所有源代码文件，如果只有一个被修改则只编译一个</p>
+<p><em>Build All</em> 重新编译所有源代码文件的代码</p>
+<p><em>Link</em> 组合源代码和库代码</p>
+<p><em>Run</em> 或 <em>Execute</em> 运行程序（自动完成上述步骤）</p>
+<p><em>Debug/Release</em> 以步进方式运行程序 <em>Debug</em> 中带有调试信息，程序较大，执行较慢</p>
+<blockquote>
+<p>在Visual Studio上运行程序时，通常要加入cin.get(); 或者两句cin.get(); cin.get();</p>
+</blockquote>
+<blockquote>
+<p>目的是防止程序输出窗口一闪而过</p>
+</blockquote>
+<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><blockquote>
+<p>可以对示例程序使用同一个项目，只在项目里增删源文件，可以节省空间和工作量</p>
+</blockquote>
+<blockquote>
+<p>改正错误时应该首先改正第一个错误；如果在标识行上找不到错误，往往在上一行</p>
+</blockquote>
+<h2 id="C-基础语法"><a href="#C-基础语法" class="headerlink" title="C++基础语法"></a>C++基础语法</h2><ol>
+<li><p>C++用 ; (分号)来区分语句结尾。</p>
+</li>
+<li><p>// 表示注释 也可以用/<em>     </em>/</p>
+</li>
+<li><p>#include 表示预处理编译指令，如： #include&lt;iostream&gt;</p>
+</li>
+<li><p>int main() 表示主函数头。</p>
+</li>
+<li><p>using namespace 表示使用什么名字空间，如：using namespace std;</p>
+</li>
+<li><p>{      }表示函数体，在花括号之间。</p>
+</li>
+<li><p>int型的main函数需要 return 一个整形的数作为返回值，通常为return 0;</p>
+</li>
+</ol>
+<h2 id="cin-和-cout"><a href="#cin-和-cout" class="headerlink" title="cin 和 cout"></a>cin 和 cout</h2><p>cin 和 cout 在名字空间std内，分别用来输入和输出变量值/字符串</p>
+<p>cin_ _用来输入字符。cin &gt;&gt; number 表示信息从cin流向number变量。</p>
+<p>cout &lt;&lt; “a = ”&lt;&lt; a &lt;&lt; endl; 表示字符串和变量值流向cout。 输出为a=1(换行)</p>
+<blockquote>
+<p>如果没有using namespace std; 就需要std::cout 或 using std::cout;</p>
+</blockquote>
+<h2 id="声明、赋值以及函数的概念"><a href="#声明、赋值以及函数的概念" class="headerlink" title="声明、赋值以及函数的概念"></a>声明、赋值以及函数的概念</h2><h3 id="声明语句"><a href="#声明语句" class="headerlink" title="声明语句"></a>声明语句</h3><p>int number = 8；<em>//声明整形变量number同时初始化为8</em></p>
+<blockquote>
+<p>C++通常在首次使用变量前才做声明；而C则是在函数体的开始部位声明所需变量。</p>
+</blockquote>
+<h3 id="赋值语句"><a href="#赋值语句" class="headerlink" title="赋值语句"></a>赋值语句</h3><p>number = 25;_ //把25赋值给number变量。_</p>
+<blockquote>
+<p>如果出现传递等号的赋值，如a = b = c = 1; 是从右向左依次赋值</p>
+</blockquote>
+<h3 id="函数的概念"><a href="#函数的概念" class="headerlink" title="函数的概念"></a>函数的概念</h3><ol>
+<li><p>x = sqrt(6.25);_ //变量 &lt;&lt;函数返回值 = 函数名（参数列表）_</p>
+<p> 有些函数不只一个参数，有些函数没有参数甚至没有返回值。</p>
+</li>
+<li><p>使用库函数前要包含相应库文件，如：#include&lt;cmath&gt;</p>
+<p> 使用用户自定义函数前要对函数原型进行声明，如：int func(int)；</p>
+</li>
+<li><p>Main()函数的返回值传递给操作系统，也叫退出值。通常0表示程序运行成功，非零则表示存在问题。</p>
+</li>
+</ol>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-01-16T07:18:59.259Z" itemprop="dateUpdated">2019-01-16 15:18:59</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="WangLiangsen.github.io">
+            <img src="/img/avatar.jpg" alt="Scenery">
+            Scenery
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/入门教程/">入门教程</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=WangLiangsen.github.io/2019/01/16/C++学习笔记01/&title=《C++入门教程01》 — iScenery&pic=WangLiangsen.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=WangLiangsen.github.io/2019/01/16/C++学习笔记01/&title=《C++入门教程01》 — iScenery&source=WangLiangsen's Blog" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=WangLiangsen.github.io/2019/01/16/C++学习笔记01/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《C++入门教程01》 — iScenery&url=WangLiangsen.github.io/2019/01/16/C++学习笔记01/&via=WangLiangsen.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=WangLiangsen.github.io/2019/01/16/C++学习笔记01/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您的打赏！
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Scenery &copy; 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=WangLiangsen.github.io/2019/01/16/C++学习笔记01/&title=《C++入门教程01》 — iScenery&pic=WangLiangsen.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=WangLiangsen.github.io/2019/01/16/C++学习笔记01/&title=《C++入门教程01》 — iScenery&source=WangLiangsen's Blog" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=WangLiangsen.github.io/2019/01/16/C++学习笔记01/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《C++入门教程01》 — iScenery&url=WangLiangsen.github.io/2019/01/16/C++学习笔记01/&via=WangLiangsen.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=WangLiangsen.github.io/2019/01/16/C++学习笔记01/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACHklEQVR42u3aQXLDIAwF0Nz/0u4BWidfEumM4bHKNMHmsVCRxOsVjysYd79PnpnPGg0MDIzHMpLF9ZabL/H3L/O1YWBgnMPIH53AklnJZiVrw8DAwFj1m/chdfJeDAwMjOrnXpjGwMDASBjJoe39g5I0tYr8Si6OgYHxQEZedf//z1/pb2BgYDyKcRVHr/SWh8irNTAwMPZm5AGu14CsXrMYrQcDA2NrRi9orko4k8ZA3trEwMDYlZG8uFoaS5aVNyeiwygGBsYxjKhZ2Drq5RtRvZCBgYGxNyN5Wd4eyI+GvY27ZWNgYBzPSNLRPChXE+NyvRADA2M7RrVMVi2NTdLXcgsBAwNjU0ZyCOuFv5yXHzqjWI6BgXEAIwmXk8sQ1atm0V8wMDC2ZlTj1dqif68t+uG2CAYGxnaMeRjtza2W3j6k2RgYGFszeulorzSW1/CTTSnfHMHAwHgsoxc684Ld9xLjP/5vYGBgbMpIAPmhrZqs5m3RQrkNAwPjMEZSDsu/zZ/Q3AIMDIxjGL02wKQ8Vz0a3s7CwMA4kpGHzt41sl7CXA64GBgYD2dcxZEnmQlvVRkOAwNjb8aqmF1NTatNhVUhGwMD47mMXpDNZyXfLthvDAyMAxjzQJkE4vllCwwMDIz5kS5pfE4uYdxiMDAwMIpBMz8Ozi+lYWBgnMNYm3DmhbnJLAwMjHMYvVpWr/XYK+FFd0YwMDD2ZPwAm3T6CDw9Hc8AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼 去哪里了！！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'ヽ(✿ﾟ▽ﾟ)ノ欢迎回来！';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>5分钟入门MARKDOWN | iScenery | 岁月漫长 要心地善良</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="入门教程,Markdown">
+    <meta name="description" content="什么是Markdown？Markdwon 是一种轻量级标记语言，由Aaron Swartz和John Gruber共同设计。它以纯文本形式（易读、易写、易更改）编写文档，并最终以HTLM格式发布。Markdown也可以理解为将以Markdown语法编写的语言转换成HTML内容的工具。  Aaron Swartz的传奇一生  14岁参与RSS 1.0规格标准制订。 2004年入读斯坦福大学，之后退学">
+<meta name="keywords" content="入门教程,Markdown">
+<meta property="og:type" content="article">
+<meta property="og:title" content="5分钟入门MARKDOWN">
+<meta property="og:url" content="WangLiangsen.github.io/2019/01/18/markdown语法入门/index.html">
+<meta property="og:site_name" content="iScenery">
+<meta property="og:description" content="什么是Markdown？Markdwon 是一种轻量级标记语言，由Aaron Swartz和John Gruber共同设计。它以纯文本形式（易读、易写、易更改）编写文档，并最终以HTLM格式发布。Markdown也可以理解为将以Markdown语法编写的语言转换成HTML内容的工具。  Aaron Swartz的传奇一生  14岁参与RSS 1.0规格标准制订。 2004年入读斯坦福大学，之后退学">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-01-17T16:29:14.228Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="5分钟入门MARKDOWN">
+<meta name="twitter:description" content="什么是Markdown？Markdwon 是一种轻量级标记语言，由Aaron Swartz和John Gruber共同设计。它以纯文本形式（易读、易写、易更改）编写文档，并最终以HTLM格式发布。Markdown也可以理解为将以Markdown语法编写的语言转换成HTML内容的工具。  Aaron Swartz的传奇一生  14岁参与RSS 1.0规格标准制订。 2004年入读斯坦福大学，之后退学">
+    
+        <link rel="alternate" type="application/atom+xml" title="iScenery" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Scenery</h5>
+          <a href="mailto:wangliangsen@outlook.com" title="wangliangsen@outlook.com" class="mail">wangliangsen@outlook.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/">
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories">
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags">
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://music.163.com/#/user/home?id=266630369" target="_blank">
+                <i class="icon icon-lg icon-music"></i>
+                音乐
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives">
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/wangliangsen" target="_blank">
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/5594662742/" target="_blank">
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">5分钟入门MARKDOWN</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">5分钟入门MARKDOWN</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-01-17T16:16:16.954Z" itemprop="datePublished" class="page-time">
+  2019-01-18
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/">学习笔记</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/Markdown/">Markdown</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#什么是Markdown？"><span class="post-toc-number">1.</span> <span class="post-toc-text">什么是Markdown？</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Tips"><span class="post-toc-number">2.</span> <span class="post-toc-text">Tips</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Markdown语法"><span class="post-toc-number">3.</span> <span class="post-toc-text">Markdown语法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#标题"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">标题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#换行"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">换行</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#列表"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">列表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#无序列表"><span class="post-toc-number">3.3.1.</span> <span class="post-toc-text">无序列表</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#有序列表"><span class="post-toc-number">3.3.2.</span> <span class="post-toc-text">有序列表</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#引用"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">引用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#文字样式（字体）"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">文字样式（字体）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#图片与链接"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">图片与链接</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#链接"><span class="post-toc-number">3.6.1.</span> <span class="post-toc-text">链接</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#图片"><span class="post-toc-number">3.6.2.</span> <span class="post-toc-text">图片</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代码和代码块"><span class="post-toc-number">3.7.</span> <span class="post-toc-text">代码和代码块</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#代码行"><span class="post-toc-number">3.7.1.</span> <span class="post-toc-text">代码行</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#代码块（段）"><span class="post-toc-number">3.7.2.</span> <span class="post-toc-text">代码块（段）</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分割线"><span class="post-toc-number">3.8.</span> <span class="post-toc-text">分割线</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#高级应用"><span class="post-toc-number">3.9.</span> <span class="post-toc-text">高级应用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#表格"><span class="post-toc-number">3.9.1.</span> <span class="post-toc-text">表格</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#脚注"><span class="post-toc-number">3.9.2.</span> <span class="post-toc-text">脚注</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常用弥补Markdown的Html标签"><span class="post-toc-number">3.9.3.</span> <span class="post-toc-text">常用弥补Markdown的Html标签</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#字体大小和颜色"><span class="post-toc-number">3.9.3.1.</span> <span class="post-toc-text">字体大小和颜色</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#文本对齐方式"><span class="post-toc-number">3.9.3.2.</span> <span class="post-toc-text">文本对齐方式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#任务列表"><span class="post-toc-number">3.9.3.3.</span> <span class="post-toc-text">任务列表</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#转义字符"><span class="post-toc-number">3.9.3.4.</span> <span class="post-toc-text">转义字符</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#在Visual-Studio-Code中编辑Markdown"><span class="post-toc-number">4.</span> <span class="post-toc-text">在Visual Studio Code中编辑Markdown</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#参考文档"><span class="post-toc-number">5.</span> <span class="post-toc-text">参考文档</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#后记"><span class="post-toc-number">6.</span> <span class="post-toc-text">后记</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-markdown语法入门" class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">5分钟入门MARKDOWN</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-01-18 00:16:16" datetime="2019-01-17T16:16:16.954Z" itemprop="datePublished">2019-01-18</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/">学习笔记</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/Markdown/">Markdown</a></li></ul></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="什么是Markdown？"><a href="#什么是Markdown？" class="headerlink" title="什么是Markdown？"></a>什么是Markdown？</h1><p>Markdwon 是一种轻量级标记语言，由Aaron Swartz和John Gruber共同设计。它以纯文本形式（易读、易写、易更改）编写文档，并最终以HTLM格式发布。Markdown也可以理解为将以Markdown语法编写的语言转换成HTML内容的工具。</p>
+<blockquote>
+<p><strong>Aaron Swartz的传奇一生</strong></p>
+<ul>
+<li>14岁参与RSS 1.0规格标准制订。</li>
+<li>2004年入读斯坦福大学，之后退学。</li>
+<li>2005年创建 Infogami,之后与Reddit合并成为其合伙人。</li>
+<li>2010年创立示进会（Demand Preogress）,积极参与禁止网络盗版法案（SOPA）活动，最终该提案被撤回。</li>
+<li>2011年7月19日,因被控从MIT和JSTOR下载480万篇学术论文并以免费形式上传于网络被捕。</li>
+<li>2013年1月自杀身亡。</li>
+</ul>
+</blockquote>
+<h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h1><p>注意：Markdown使用 # + * &gt; _ 等符号来标记，符号后面必须跟上至少1个空格才会被语法识别。</p>
+<h1 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>Markdown的标题用’# ‘标记<br>在想要作为标题的文字开头加上1~6个#，依次表示一级到六级标题<br>举例：<br># 一级标题<br>## 二级标题<br>### 三级标题  </p>
+<blockquote>
+<p>为了避免文字TOC出现混乱，本例不做输出演示。</p>
+</blockquote>
+<h2 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h2><p>在行尾添加两个空格（spacebar）加一个回车（enter）表示换行：</p>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>列表分为 无序列表 和 有序列表</p>
+<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>用 - + * 作为打头标记<br>举例：<br>+ 项目1<br>+ 项目2<br>+ 项目3<br>输出：</p>
+<blockquote>
+<ul>
+<li>项目1</li>
+<li>项目2</li>
+<li>项目3</li>
+</ul>
+</blockquote>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>有序列表则使用数字加英文句点.来表示<br>举例:<br>1. 第一项<br>2. 第二项<br>3. 第三项<br>输出：</p>
+<blockquote>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ol>
+</blockquote>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>引用以 &gt; 来表示，引用中又支持多级引用、标题、列表、代码块、分割线等常规语法。（也就是说：引用里面可以加标题，列表，嵌套引用等等。）<br>举例：<br>> 引用自百度文库<br>>&gt; 引用自网易云音乐<br>输出：</p>
+<blockquote>
+<p>引用自百度文库</p>
+<blockquote>
+<p>引用自网易云音乐</p>
+</blockquote>
+</blockquote>
+<h2 id="文字样式（字体）"><a href="#文字样式（字体）" class="headerlink" title="文字样式（字体）"></a>文字样式（字体）</h2><p>*斜体文本*</p>
+<p>**加粗文本**</p>
+<p>*<strong>斜粗体文本*</strong></p>
+<p>\<del>删除文本</del></p>
+<p>` 底纹 `</p>
+<p>&lt; sub&gt;下标文字&lt; /sub&gt;</p>
+<p>&lt; sup&gt;上标文字&lt; /sup&gt;</p>
+<p>&lt; u&gt;下划线文本&lt; /u&gt;</p>
+<p>输出：</p>
+<blockquote>
+<p><em>斜体文本</em></p>
+<p><strong>加粗文本</strong></p>
+<p><strong><em>斜粗体文本</em></strong></p>
+<p><del>删除文本</del></p>
+<p><code>底纹</code></p>
+<p><sub>下标文字</sub>  正常文字</p>
+<p><sup>上标文字</sup>  正常文字</p>
+<p><u>下划线文本</u></p>
+</blockquote>
+<h2 id="图片与链接"><a href="#图片与链接" class="headerlink" title="图片与链接"></a>图片与链接</h2><h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>链接的形式: 内联 和 引用。这两种形式下链接文本的定界符都是 [中括号].<br>要创建内联链接, 只需在链接文本的右括号后面紧接一对圆括号. 圆括号里面放所需的 URL 链接, 还可以放一个 可选 的链接标题, 标题要用引号包围. </p>
+<p>自动链接：直接使用\&lt; &gt;括起来 &lt;yourlink.xyz&gt;</p>
+<p>链接： [ ]( ) [链接描述](链接的地址)</p>
+<p>举例：</p>
+<p>This is [an example](<a href="http://example.com/" target="_blank" rel="noopener">http://example.com/</a> “Title”) inline link.</p>
+<p>This is an example \<a href="http://example.com" target="_blank" rel="noopener">http://example.com</a></p>
+<p>输出：</p>
+<blockquote>
+<p>This is <a href="http://example.com/" title="Title" target="_blank" rel="noopener">an example</a> inline link.</p>
+<p>This is an example <a href="http://example.com" target="_blank" rel="noopener">http://example.com</a></p>
+</blockquote>
+<h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p>Markdown 使用了类似链接的语法来插入图片<br>在链接的语法前面加一个感叹号: !<br>也就是:</p>
+<p>图片：![Alt text] (/path/to/img.jpg “Optional title”)</p>
+<p>由于没有本地路径，此例子不做举例输出演示。</p>
+<h2 id="代码和代码块"><a href="#代码和代码块" class="headerlink" title="代码和代码块"></a>代码和代码块</h2><h3 id="代码行"><a href="#代码行" class="headerlink" title="代码行"></a>代码行</h3><p>引用的代码只有一行，可以用 ` 号将语句包起来。<br>举例：</p>
+<p>`cout &lt;&lt; “Hello world” //this is an example of C++ outputing hello word`</p>
+<p>输出：</p>
+<blockquote>
+<p><code>cout &lt;&lt; &quot;Hello world&quot; //this is an example of C++ outputing hello word</code></p>
+</blockquote>
+<h3 id="代码块（段）"><a href="#代码块（段）" class="headerlink" title="代码块（段）"></a>代码块（段）</h3><p>用一对\<figure class="highlight plain"><figcaption><span>将代码括起来，在第一个\`\`\`之后，空格输入语言名称即可高亮代码。  </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">格式如下：</span><br><span class="line"></span><br><span class="line">\``` [语言]</span><br><span class="line"></span><br><span class="line">这里是代码​</span><br><span class="line"></span><br><span class="line">\</span><br></pre></td></tr></table></figure></p>
+<p>举例：</p>
+<p>``` C++</p>
+<p>#include<iostream><br>int main()<br>{<br>    using namespace std;<br>    int x = 1;<br>    x = x++; //x = x + 1<br>    cout &lt;&lt; x;<br>    return 0;<br>}</iostream></p>
+<p>```</p>
+<p>输出：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">1</span>;</span><br><span class="line">    x = x++; <span class="comment">//x = x + 1</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; x;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>在一行中使用三个或三个以上的 * 可以添加分隔线，中间可以插入空格，但是不能有其他字符。</p>
+<p>举例：</p>
+<p>***</p>
+<p>输出：</p>
+<blockquote>
+<hr>
+</blockquote>
+<h2 id="高级应用"><a href="#高级应用" class="headerlink" title="高级应用"></a>高级应用</h2><h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>表格用竖线|分割不同列，用以下标记设置对齐方式 (ATTENTION！必须) ：<br>居左:—-    居中:—-:    居右—-:</p>
+<p>举例：</p>
+<p>|标题1|标题2|标题3|</p>
+<p>|:—|:—:|—:|</p>
+<p>|居左文本|居中文本|居右文本|</p>
+<p>输出：</p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">标题1</th>
+<th style="text-align:center">标题2</th>
+<th style="text-align:right">标题3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">居左文本</td>
+<td style="text-align:center">居中文本</td>
+<td style="text-align:right">居右文本</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h3 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h3><p>使用[^number ]来定义脚注</p>
+<p>举例：</p>
+<p>这是一个脚注的例子[^ 1]</p>
+<p>[^1 ]: 这里是脚注</p>
+<p>输出：</p>
+<blockquote>
+<p>这是一个脚注的例子[^1]</p>
+</blockquote>
+<blockquote>
+</blockquote>
+<h3 id="常用弥补Markdown的Html标签"><a href="#常用弥补Markdown的Html标签" class="headerlink" title="常用弥补Markdown的Html标签"></a>常用弥补Markdown的Html标签</h3><h4 id="字体大小和颜色"><a href="#字体大小和颜色" class="headerlink" title="字体大小和颜色"></a>字体大小和颜色</h4><p>\&lt; font face=”微软雅黑” color=”red” size=”6”&gt;字体及字体颜色和大小<br>\&lt; /font&gt;<br>\&lt; font color=”#0000ff”&gt;字体颜色&lt;/ font&gt;</p>
+<font face="微软雅黑" color="red" size="6">字体及字体颜色和大小</font><br><font color="#0000ff">字体颜色</font>
+
+<h4 id="文本对齐方式"><a href="#文本对齐方式" class="headerlink" title="文本对齐方式"></a>文本对齐方式</h4><p>&lt; p align=”left”&gt;居左文本&lt; /p&gt;<br>&lt; p align=”center”&gt;居中文本&lt; /p&gt;<br>&lt; p align=”right”&gt;居右文本&lt; /p&gt;</p>
+<p align="left">居左文本</p><br><p align="center">居中文本</p><br><p align="right">居右文本</p>
+
+<h4 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h4><p>任务列表支持Markdown的字体格式，支持链接，支持有序和无序列表。<br>用- [ ]表示未完成<br>用- [x]表示完成</p>
+<p>举例：</p>
+<p>- [ ] <a href="">links</a>, <strong>formatting</strong>, and <del>tags</del> supported<br>- [x] list syntax required (any unordered or ordered list   supported)<br>- [ ] this is a complete item<br>- [x] this is an incomplete item  </p>
+<p>输出：</p>
+<blockquote>
+<ul>
+<li style="list-style: none"><input type="checkbox"> <a href="">links</a>, <strong>formatting</strong>, and <del>tags</del> supported  </li>
+<li style="list-style: none"><input type="checkbox" checked> list syntax required (any unordered or ordered list   supported)  </li>
+<li style="list-style: none"><input type="checkbox"> this is a complete item  </li>
+<li style="list-style: none"><input type="checkbox" checked> this is an incomplete item  </li>
+</ul>
+</blockquote>
+<h4 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h4><p>转义字符就是想显示出Markdown语法内的标记字符，比如* _ - + 等。<br>这篇教程在举例部分，为了显示语法就用了很多转义字符。</p>
+<p>转义字符用 \ 作为符号的前缀</p>
+<h1 id="在Visual-Studio-Code中编辑Markdown"><a href="#在Visual-Studio-Code中编辑Markdown" class="headerlink" title="在Visual Studio Code中编辑Markdown"></a>在Visual Studio Code中编辑Markdown</h1><p>在扩展中心（ctrl+shift+x）安装Markdown all in one插件就能很方便的编辑和预览Markdown文件。<br>快捷键如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Key</th>
+<th style="text-align:left">Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Ctrl + B</td>
+<td style="text-align:left">加粗</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl + I</td>
+<td style="text-align:left">斜体</td>
+</tr>
+<tr>
+<td style="text-align:left">Alt + S</td>
+<td style="text-align:left">删除线</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl + Shift + ]</td>
+<td style="text-align:left">标题 从一级到六级递增</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl + Shift + [</td>
+<td style="text-align:left">标题 从当前级到一级递减</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl + M</td>
+<td style="text-align:left">数学公式环境</td>
+</tr>
+<tr>
+<td style="text-align:left">Alt + C</td>
+<td style="text-align:left">Check/Uncheck task list item</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl + Shift + V</td>
+<td style="text-align:left">Markdown预览</td>
+</tr>
+<tr>
+<td style="text-align:left">Ctrl + K V</td>
+<td style="text-align:left">Toggle preview to side</td>
+</tr>
+</tbody>
+</table>
+<h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><p>本教程参考的文档如下：</p>
+<blockquote>
+<p><a href="https://markdown-zh.readthedocs.io/en/latest/" target="_blank" rel="noopener">https://markdown-zh.readthedocs.io/en/latest/</a><br><a href="http://www.cycygogo.cn/2017/12/05/Markdown-Syntax/" target="_blank" rel="noopener">http://www.cycygogo.cn/2017/12/05/Markdown-Syntax/</a><br><a href="https://www.jianshu.com/p/ccfd81fe77d2" target="_blank" rel="noopener">https://www.jianshu.com/p/ccfd81fe77d2</a></p>
+</blockquote>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><blockquote>
+<p>此Markdown教程尽可能简单的讲解了Markdown的语法，在字体及列表中，除了*<br>仍有很多其他标识符可以使用。本文只介绍了其中一种。</p>
+</blockquote>
+<blockquote>
+<p>除了入门Markdown，本文也可留作日后语法备查。</p>
+</blockquote>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-01-17T16:29:14.228Z" itemprop="dateUpdated">2019-01-18 00:29:14</time>
+</span><br>
+
+
+        
+        曾经的学霸，现在的学渣，以及在自我改变的道路上百折不挠的struggler!
+        
+    </div>
+    
+    <footer>
+        <a href="WangLiangsen.github.io">
+            <img src="/img/avatar.jpg" alt="Scenery">
+            Scenery
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/入门教程/">入门教程</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=WangLiangsen.github.io/2019/01/18/markdown语法入门/&title=《5分钟入门MARKDOWN》 — iScenery&pic=WangLiangsen.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=WangLiangsen.github.io/2019/01/18/markdown语法入门/&title=《5分钟入门MARKDOWN》 — iScenery&source=WangLiangsen's Blog" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=WangLiangsen.github.io/2019/01/18/markdown语法入门/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《5分钟入门MARKDOWN》 — iScenery&url=WangLiangsen.github.io/2019/01/18/markdown语法入门/&via=WangLiangsen.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=WangLiangsen.github.io/2019/01/18/markdown语法入门/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/01/16/C++学习笔记01/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">C++入门教程01</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您的打赏！
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Scenery &copy; 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=WangLiangsen.github.io/2019/01/18/markdown语法入门/&title=《5分钟入门MARKDOWN》 — iScenery&pic=WangLiangsen.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=WangLiangsen.github.io/2019/01/18/markdown语法入门/&title=《5分钟入门MARKDOWN》 — iScenery&source=WangLiangsen's Blog" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=WangLiangsen.github.io/2019/01/18/markdown语法入门/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《5分钟入门MARKDOWN》 — iScenery&url=WangLiangsen.github.io/2019/01/18/markdown语法入门/&via=WangLiangsen.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=WangLiangsen.github.io/2019/01/18/markdown语法入门/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACO0lEQVR42u3aQW7DMAwFUd//0inQVYFG6nzSKWBqtApSOfbzgiVFXhder++1//73559rde3qqusTS4YMGY9lvLZr/4h70v5BV7+w37+kypAh4wAGCaY8RO6D5uoFkb8uv5chQ4YMkN7tw3Q/3ZQhQ4YMHnBJ0lZLE/mLkCFDxpkM/ij7n0uDbFoM31CLy5Ah44GMtDHwn58/2N+QIUPGQxivcPUbkJwRPJUMGTJGM9L0jqdxaWuBv5rla5IhQ8ZoRpoU1sYsamVtreUgQ4aMSYxaaEtTxlriyBulMmTImM0gga8D6xzo8+AuQ4aM2Yxa5tg/3Cew/Wt9839DhgwZQxkkzNWCZjrslY56oARRhgwZIxhpwCUhkpS4PBlFO2XIkHEAo3bUVWsSkETwht6FDBkyhjL4QVtnhIvfMSDJkCFjNIOXrym7Vtz2Y6wMGTKmMu4dsOikmPwYDk2OyJAhYwSj81g8ZbxKK+hpyJAh4wAGvzHZz8fLasXwm3vJkCFjNIMUh3xgghecpD2QHvzJkCFjKoO3FWvtyf60WivDlSFDxiBGLbCS/bXELh4dkyFDxmhGP/kLDsXCg7x0BESGDBlTGZ1xrnRPvyEqQ4aMMxmdMSxyM9JmIIVrMBwmQ4aMoQwSZPnNalfdkD7KkCHjAEZttKLfpEzXH7W4DBkyjmfcFeV4ysiLahkyZMggTco0+KaNhKAfK0OGjKEMUsTW9vBfqBXYMmTIOIHRaQz000FSKgfDYTJkyJjG+AJJnpNh6ms52wAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼 去哪里了！！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'ヽ(✿ﾟ▽ﾟ)ノ欢迎回来！';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://WangLiangsen.github.io/"/>
-  <updated>2019-01-17T16:29:14.228Z</updated>
+  <updated>2019-03-19T16:30:58.161Z</updated>
   <id>http://WangLiangsen.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>A Countdown</title>
+    <link href="http://WangLiangsen.github.io/2019/03/19/A%20Countdown/"/>
+    <id>http://WangLiangsen.github.io/2019/03/19/A Countdown/</id>
+    <published>2019-03-19T15:09:02.000Z</published>
+    <updated>2019-03-19T16:30:58.161Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="A-Countdown"><a href="#A-Countdown" class="headerlink" title="A Countdown"></a>A Countdown</h1><blockquote><p align="right">2019年3月19日 —— 晴 —— 成都市</p></blockquote><p>今天签了人生第一份工作，坐标深圳软件园。  </p><p>坐在地铁上的时候心里挺空的，前途未卜的感觉。没有找到工作的时候，怕自己没有能力、没有运气、进不了大企业；有Offer之后，开始担心是否能立足、有多大提升。根源并非“不知满足”的心理，而是没有一个确信的规划。所以我突然认识到，<strong>最可怕的不是失败了多少次</strong>，<strong>而是不知道自己想要什么</strong>。   </p><p>最近好多事情也开始countdown，来不及详述，来不及感伤，甚至来不及写在博客里。  </p><p>路口就在不远处了，朋友的建议、家人的看法、自己的主张来回拉扯着。但愿我能在走到红绿灯之前弄清楚自己想要什么，不至于迷失于车水马龙吧。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;A-Countdown&quot;&gt;&lt;a href=&quot;#A-Countdown&quot; class=&quot;headerlink&quot; title=&quot;A Countdown&quot;&gt;&lt;/a&gt;A Countdown&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p align=&quot;right&quot;&gt;2019年3月
+      
+    
+    </summary>
+    
+      <category term="日记" scheme="http://WangLiangsen.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+      <category term="日记" scheme="http://WangLiangsen.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+      <category term="心情" scheme="http://WangLiangsen.github.io/tags/%E5%BF%83%E6%83%85/"/>
+    
+  </entry>
   
   <entry>
     <title>5分钟入门MARKDOWN</title>
@@ -47,10 +75,10 @@
   
   <entry>
     <title>C++入门教程01</title>
-    <link href="http://WangLiangsen.github.io/2019/01/16/C++%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001/"/>
-    <id>http://WangLiangsen.github.io/2019/01/16/C++学习笔记01/</id>
-    <published>2019-01-16T07:11:19.388Z</published>
-    <updated>2019-01-16T07:18:59.259Z</updated>
+    <link href="http://WangLiangsen.github.io/2019/01/05/C++%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001/"/>
+    <id>http://WangLiangsen.github.io/2019/01/05/C++学习笔记01/</id>
+    <published>2019-01-05T07:10:02.000Z</published>
+    <updated>2019-03-19T15:12:09.226Z</updated>
     
     <content type="html"><![CDATA[<h1 id="开始学习C"><a href="#开始学习C" class="headerlink" title="开始学习C++"></a>开始学习C++</h1><h2 id="关于C-的源文件"><a href="#关于C-的源文件" class="headerlink" title="关于C++的源文件"></a>关于C++的源文件</h2><p>C++的源代码(Source Code)文件扩展名为.C 或者.cpp</p><h2 id="Windows上的编译器"><a href="#Windows上的编译器" class="headerlink" title="Windows上的编译器"></a>Windows上的编译器</h2><p><em>Compile</em> 对打开文件中的代码进行编译</p><p><em>Build</em> 和  <em>Make</em> 编译项目中所有源代码文件，如果只有一个被修改则只编译一个</p><p><em>Build All</em> 重新编译所有源代码文件的代码</p><p><em>Link</em> 组合源代码和库代码</p><p><em>Run</em> 或 <em>Execute</em> 运行程序（自动完成上述步骤）</p><p><em>Debug/Release</em> 以步进方式运行程序 <em>Debug</em> 中带有调试信息，程序较大，执行较慢</p><blockquote><p>在Visual Studio上运行程序时，通常要加入cin.get(); 或者两句cin.get(); cin.get();</p></blockquote><blockquote><p>目的是防止程序输出窗口一闪而过</p></blockquote><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><blockquote><p>可以对示例程序使用同一个项目，只在项目里增删源文件，可以节省空间和工作量</p></blockquote><blockquote><p>改正错误时应该首先改正第一个错误；如果在标识行上找不到错误，往往在上一行</p></blockquote><h2 id="C-基础语法"><a href="#C-基础语法" class="headerlink" title="C++基础语法"></a>C++基础语法</h2><ol><li><p>C++用 ; (分号)来区分语句结尾。</p></li><li><p>// 表示注释 也可以用/<em>     </em>/</p></li><li><p>#include 表示预处理编译指令，如： #include&lt;iostream&gt;</p></li><li><p>int main() 表示主函数头。</p></li><li><p>using namespace 表示使用什么名字空间，如：using namespace std;</p></li><li><p>{      }表示函数体，在花括号之间。</p></li><li><p>int型的main函数需要 return 一个整形的数作为返回值，通常为return 0;</p></li></ol><h2 id="cin-和-cout"><a href="#cin-和-cout" class="headerlink" title="cin 和 cout"></a>cin 和 cout</h2><p>cin 和 cout 在名字空间std内，分别用来输入和输出变量值/字符串</p><p>cin_ _用来输入字符。cin &gt;&gt; number 表示信息从cin流向number变量。</p><p>cout &lt;&lt; “a = ”&lt;&lt; a &lt;&lt; endl; 表示字符串和变量值流向cout。 输出为a=1(换行)</p><blockquote><p>如果没有using namespace std; 就需要std::cout 或 using std::cout;</p></blockquote><h2 id="声明、赋值以及函数的概念"><a href="#声明、赋值以及函数的概念" class="headerlink" title="声明、赋值以及函数的概念"></a>声明、赋值以及函数的概念</h2><h3 id="声明语句"><a href="#声明语句" class="headerlink" title="声明语句"></a>声明语句</h3><p>int number = 8；<em>//声明整形变量number同时初始化为8</em></p><blockquote><p>C++通常在首次使用变量前才做声明；而C则是在函数体的开始部位声明所需变量。</p></blockquote><h3 id="赋值语句"><a href="#赋值语句" class="headerlink" title="赋值语句"></a>赋值语句</h3><p>number = 25;_ //把25赋值给number变量。_</p><blockquote><p>如果出现传递等号的赋值，如a = b = c = 1; 是从右向左依次赋值</p></blockquote><h3 id="函数的概念"><a href="#函数的概念" class="headerlink" title="函数的概念"></a>函数的概念</h3><ol><li><p>x = sqrt(6.25);_ //变量 &lt;&lt;函数返回值 = 函数名（参数列表）_</p><p> 有些函数不只一个参数，有些函数没有参数甚至没有返回值。</p></li><li><p>使用库函数前要包含相应库文件，如：#include&lt;cmath&gt;</p><p> 使用用户自定义函数前要对函数原型进行声明，如：int func(int)；</p></li><li><p>Main()函数的返回值传递给操作系统，也叫退出值。通常0表示程序运行成功，非零则表示存在问题。</p></li></ol>]]></content>
     

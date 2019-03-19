@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Python 3 入门教程02 | iScenery | 岁月漫长 要心地善良</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="入门教程,Python3">
+    <meta name="description" content="Python的基本数据类型 整数   1234567   1，100，-8080，0，   ```     &amp;gt; 十六进制整数 `0xff00，0xa5b4c3d2`2. 浮点数   ``` Python   1.23，3.14，-9.01 1.23e9 12.3e8 1.2e-5  字符串字符串是以单引号&amp;#39;或双引号&amp;quot;括起来的任意文本，比如&amp;#39;abc&amp;#39;，&amp;quo">
+<meta name="keywords" content="入门教程,Python3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python 3 入门教程02">
+<meta property="og:url" content="http://WangLiangsen.github.io/2019/03/20/python入门教程02/index.html">
+<meta property="og:site_name" content="iScenery">
+<meta property="og:description" content="Python的基本数据类型 整数   1234567   1，100，-8080，0，   ```     &amp;gt; 十六进制整数 `0xff00，0xa5b4c3d2`2. 浮点数   ``` Python   1.23，3.14，-9.01 1.23e9 12.3e8 1.2e-5  字符串字符串是以单引号&amp;#39;或双引号&amp;quot;括起来的任意文本，比如&amp;#39;abc&amp;#39;，&amp;quo">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-19T17:14:09.772Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python 3 入门教程02">
+<meta name="twitter:description" content="Python的基本数据类型 整数   1234567   1，100，-8080，0，   ```     &amp;gt; 十六进制整数 `0xff00，0xa5b4c3d2`2. 浮点数   ``` Python   1.23，3.14，-9.01 1.23e9 12.3e8 1.2e-5  字符串字符串是以单引号&amp;#39;或双引号&amp;quot;括起来的任意文本，比如&amp;#39;abc&amp;#39;，&amp;quo">
+    
+        <link rel="alternate" type="application/atom+xml" title="iScenery" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Scenery</h5>
+          <a href="mailto:wangliangsen@outlook.com" title="wangliangsen@outlook.com" class="mail">wangliangsen@outlook.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/">
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories">
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags">
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://music.163.com/#/user/home?id=266630369" target="_blank">
+                <i class="icon icon-lg icon-music"></i>
+                音乐
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives">
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/wangliangsen" target="_blank">
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/5594662742/" target="_blank">
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Python 3 入门教程02</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Python 3 入门教程02</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-03-19T17:13:55.000Z" itemprop="datePublished" class="page-time">
+  2019-03-20
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/">学习笔记</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/Pyhton3/">Pyhton3</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Python的基本数据类型"><span class="post-toc-number">1.</span> <span class="post-toc-text">Python的基本数据类型</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Python的变量"><span class="post-toc-number">2.</span> <span class="post-toc-text">Python的变量</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Python的常量"><span class="post-toc-number">3.</span> <span class="post-toc-text">Python的常量</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Python的字符串编码"><span class="post-toc-number">4.</span> <span class="post-toc-text">Python的字符串编码</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#list和tuple"><span class="post-toc-number">5.</span> <span class="post-toc-text">list和tuple</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#列表list"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">列表list</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是list"><span class="post-toc-number">5.1.1.</span> <span class="post-toc-text">什么是list</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#list的常见操作"><span class="post-toc-number">5.1.2.</span> <span class="post-toc-text">list的常见操作</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#元组tuple"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">元组tuple</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-python入门教程02" class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Python 3 入门教程02</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-03-20 01:13:55" datetime="2019-03-19T17:13:55.000Z" itemprop="datePublished">2019-03-20</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/">学习笔记</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/Pyhton3/">Pyhton3</a></li></ul></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Python的基本数据类型"><a href="#Python的基本数据类型" class="headerlink" title="Python的基本数据类型"></a>Python的基本数据类型</h1><ol>
+<li><p>整数  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">   <span class="number">1</span>，<span class="number">100</span>，<span class="number">-8080</span>，<span class="number">0</span>，</span><br><span class="line">   ```  </span><br><span class="line">   &gt; 十六进制整数 `<span class="number">0xff00</span>，<span class="number">0xa5b4c3d2</span>`</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> 浮点数</span><br><span class="line">   ``` Python</span><br><span class="line">   <span class="number">1.23</span>，<span class="number">3.14</span>，<span class="number">-9.01</span> <span class="number">1.23e9</span> <span class="number">12.3e8</span> <span class="number">1.2e-5</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字符串<br>字符串是以单引号<code>&#39;</code>或双引号<code>&quot;</code>括起来的任意文本，比如<code>&#39;abc&#39;</code>，<code>&quot;xyz&quot;</code>  </p>
+<blockquote>
+<ul>
+<li>字符串内部既包含<code>&#39;</code>又包含<code>&quot;</code>可以用转义字符<code>\</code>来标识<br><code>&#39;I\&#39;m \&quot;OK\&quot;!&#39;</code>  </li>
+<li>转义字符\可以转义很多字符，比如<code>\n</code>表示换行，<code>\t</code>表示制表符，字符\本身也要转义，所以<code>\\</code>表示的字符就是\</li>
+</ul>
+</blockquote>
+</li>
+<li>布尔值<br>布尔值只有<code>True</code>、<code>False</code>两种值(注意大小写)</li>
+<li>空值<br>空值是Python里一个特殊的值，用<code>None</code>表示。<code>None</code>不能理解为0，因为0是有意义的，而<code>None</code>是一个特殊的空值。</li>
+</ol>
+<h1 id="Python的变量"><a href="#Python的变量" class="headerlink" title="Python的变量"></a>Python的变量</h1><p>变量名必须是大小写英文、数字和<code>_</code>的组合，且不能用数字开头<br>在Python中，等号<code>=</code>是赋值语句，可以把任意数据类型赋值给变量，同一个变量可以反复赋值，而且可以是不同类型的变量<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">123</span> <span class="comment"># a是整数</span></span><br><span class="line">print(a)</span><br><span class="line">a = <span class="string">'ABC'</span> <span class="comment"># a变为字符串</span></span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>变量本身类型不固定的语言称之为动态语言，与之对应的是静态语言。<br>静态语言在定义变量时必须指定变量类型 (如 C 或 C++)</p>
+</blockquote>
+<h1 id="Python的常量"><a href="#Python的常量" class="headerlink" title="Python的常量"></a>Python的常量</h1><p>在Python中，通常用全部大写的变量名表示常量：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PI = <span class="number">3.14159265359</span> <span class="comment"># PI是一个常量</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="Python的字符串编码"><a href="#Python的字符串编码" class="headerlink" title="Python的字符串编码"></a>Python的字符串编码</h1><p>在Python 3版本中，字符串是以Unicode编码的，也就是说，Python的字符串支持多语言<br>对于单个字符的编码，Python提供了<code>ord()</code>函数获取字符的整数表示，<code>chr()</code>函数把编码转换为对应的字符：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span>&gt;&gt; ord('A')</span><br><span class="line">65</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; ord('中')</span><br><span class="line">20013</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; chr(66)</span><br><span class="line">'B'</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; chr(25991)</span><br><span class="line">'文'</span><br><span class="line">```  </span><br><span class="line">以Unicode表示的str通过`encode()`方法可以编码为指定的bytes，例如：</span><br><span class="line">``` shell</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; 'ABC'.encode('ascii')</span><br><span class="line">b'ABC'</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; '中文'.encode('utf-8')</span><br><span class="line">b'\xe4\xb8\xad\xe6\x96\x87'</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; '中文'.encode('ascii')</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File "&lt;stdin&gt;", line 1, in &lt;module&gt;</span><br><span class="line">UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-1: ordinal not in range(128)</span><br><span class="line">```  </span><br><span class="line">反过来，如果我们从网络或磁盘上读取了字节流，那么读到的数据就是bytes。要把bytes变为str，就需要用`decode()`方法：</span><br><span class="line">``` shell</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; b'ABC'.decode('ascii')</span><br><span class="line">'ABC'</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; b'\xe4\xb8\xad\xe6\x96\x87'.decode('utf-8')</span><br><span class="line">'中文'</span><br><span class="line">```  </span><br><span class="line">要计算str包含多少个字符，可以用`len()`函数：</span><br><span class="line">``` shell</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; len('ABC')</span><br><span class="line">3</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; len('中文')</span><br><span class="line">2</span><br><span class="line">```  </span><br><span class="line">len()函数计算的是str的字符数，如果换成bytes，`len()`函数就计算字节数：</span><br><span class="line">``` shell</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; len(b'ABC')</span><br><span class="line">3</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; len(b'\xe4\xb8\xad\xe6\x96\x87')</span><br><span class="line">6</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; len('中文'.encode('utf-8'))</span><br><span class="line">6</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 格式化</span><br><span class="line">在Python中，采用的格式化方式和C语言是一致的，用%实现，举例如下：</span><br><span class="line">``` shell</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; 'Hello, %s' % 'world'</span><br><span class="line">'Hello, world'</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; 'Hi, %s, you have $%d.' % ('Michael', 1000000)</span><br><span class="line">'Hi, Michael, you have $1000000.'</span><br></pre></td></tr></table></figure></p>
+<p><code>%</code>运算符就是用来格式化字符串的。在字符串内部，<code>%s</code>表示用字符串替换，<code>%d</code>表示用整数替换<br>|占位符|替换内容|<br>|:-|-:|<br>|%d|整数|<br>|%f|浮点数|<br>|%s|字符串|<br>|%x|十六进制整数|</p>
+<h1 id="list和tuple"><a href="#list和tuple" class="headerlink" title="list和tuple"></a>list和tuple</h1><h2 id="列表list"><a href="#列表list" class="headerlink" title="列表list"></a>列表list</h2><h3 id="什么是list"><a href="#什么是list" class="headerlink" title="什么是list"></a>什么是list</h3><p>list是一种有序的集合，可以随时添加和删除其中的元素<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span>&gt;&gt; classmates = ['Michael', 'Bob', 'Tracy']</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; classmates</span><br><span class="line">['Michael', 'Bob', 'Tracy']</span><br></pre></td></tr></table></figure></p>
+<p>变量classmates就是一个list。用len()函数可以获得list元素的个数：(此例子中是3)  </p>
+<p>用索引来访问list中每一个位置的元素，记得索引是从0开始的<br>当索引超出了范围时，Python会报一个IndexError错误，所以，要确保索引不要越界<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span>&gt;&gt; classmates[0]</span><br><span class="line">'Michael'</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; classmates[2]</span><br><span class="line">'Tracy'</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; classmates[3]</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File "&lt;stdin&gt;", line 1, in &lt;module&gt;</span><br><span class="line">IndexError: list index out of range</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>如果要取最后一个元素，除了计算索引位置外，还可以用-1做索引，直接获取最后一个元素<br>以此类推，可以获取倒数第2个、倒数第3个(-2  -3)  </p>
+</blockquote>
+<h3 id="list的常见操作"><a href="#list的常见操作" class="headerlink" title="list的常见操作"></a>list的常见操作</h3><ol>
+<li><p>list中追加元素到末尾</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span>&gt;&gt; classmates.append('Adam')</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; classmates</span><br><span class="line">['Michael', 'Bob', 'Tracy', 'Adam']</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>把元素插入到指定的位置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; classmates.insert(1, &apos;Jack&apos;)</span><br><span class="line">&gt;&gt;&gt; classmates</span><br><span class="line">[&apos;Michael&apos;, &apos;Jack&apos;, &apos;Bob&apos;, &apos;Tracy&apos;, &apos;Adam&apos;]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>要删除list末尾的元素</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span>&gt;&gt; classmates.pop()</span><br><span class="line">'Adam'</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; classmates</span><br><span class="line">['Michael', 'Jack', 'Bob', 'Tracy']</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除指定位置的元素</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span>&gt;&gt; classmates.pop(1)</span><br><span class="line">'Jack'</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; classmates</span><br><span class="line">['Michael', 'Bob', 'Tracy']</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>把某个元素替换成别的元素</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span>&gt;&gt; classmates[1] = 'Sarah'</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; classmates</span><br><span class="line">['Michael', 'Sarah', 'Tracy']</span><br><span class="line">```  </span><br><span class="line"><span class="meta">#</span>## list的其他用法</span><br><span class="line">1. list里面的元素的数据类型也可以不同：</span><br><span class="line">``` shell</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; L = ['Apple', 123, True]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>list元素也可以是另一个list：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span>&gt;&gt; s = ['Python', 'java', ['asp', 'php'], 'scheme']</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; len(s)</span><br><span class="line">4</span><br><span class="line">```  </span><br><span class="line">3. 如果一个list中一个元素也没有，就是一个空的list，它的长度为0：</span><br><span class="line">```  shell</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; L = []</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; len(L)</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="元组tuple"><a href="#元组tuple" class="headerlink" title="元组tuple"></a>元组tuple</h2><p>tuple和list非常类似，但是tuple一旦初始化就不能修改<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span>&gt;&gt; classmates = ('Michael', 'Bob', 'Tracy')</span><br></pre></td></tr></table></figure></p>
+<p>现在，classmates这个tuple不能变了，它也没有append()，insert()这样的方法。其他获取元素的方法和list是一样的，你可以正常地使用classmates[0]，classmates[-1]，但不能赋值成另外的元素。  </p>
+<blockquote>
+<p>tuple不可变，所以代码更安全。如果可能，能用tuple代替list就尽量用tuple  </p>
+<ul>
+<li>如果要定义一个空的tuple，可以写成()：<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span>&gt;&gt; t = ()</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; t</span><br><span class="line">()</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>只有1个元素的tuple定义时必须加一个逗号<code>,</code>，来消除歧义：<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span>&gt;&gt; t = (1,)</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; t</span><br><span class="line">(1,)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Python在显示只有1个元素的tuple时，也会加一个逗号,，以免被误解成数学计算意义上的括号  </p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-03-19T17:14:09.772Z" itemprop="dateUpdated">2019-03-20 01:14:09</time>
+</span><br>
+
+
+        
+        曾经的学霸，现在的学渣，以及在自我改变的道路上百折不挠的struggler!
+        
+    </div>
+    
+    <footer>
+        <a href="http://WangLiangsen.github.io">
+            <img src="/img/avatar.jpg" alt="Scenery">
+            Scenery
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python3/">Python3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/入门教程/">入门教程</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://WangLiangsen.github.io/2019/03/20/python入门教程02/&title=《Python 3 入门教程02》 — iScenery&pic=http://WangLiangsen.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://WangLiangsen.github.io/2019/03/20/python入门教程02/&title=《Python 3 入门教程02》 — iScenery&source=WangLiangsen's Blog" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://WangLiangsen.github.io/2019/03/20/python入门教程02/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Python 3 入门教程02》 — iScenery&url=http://WangLiangsen.github.io/2019/03/20/python入门教程02/&via=http://WangLiangsen.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://WangLiangsen.github.io/2019/03/20/python入门教程02/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/03/20/python入门教程01/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Python 3 入门教程01</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您的打赏！
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Scenery &copy; 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://WangLiangsen.github.io/2019/03/20/python入门教程02/&title=《Python 3 入门教程02》 — iScenery&pic=http://WangLiangsen.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://WangLiangsen.github.io/2019/03/20/python入门教程02/&title=《Python 3 入门教程02》 — iScenery&source=WangLiangsen's Blog" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://WangLiangsen.github.io/2019/03/20/python入门教程02/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Python 3 入门教程02》 — iScenery&url=http://WangLiangsen.github.io/2019/03/20/python入门教程02/&via=http://WangLiangsen.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://WangLiangsen.github.io/2019/03/20/python入门教程02/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACHElEQVR42u3aO27DMBAFQN//0k6bIlLeW8YBRA6rwFYojgtif69XvN7f1tXnVyvfM/mvpYWBgfFYRnKI/LhX1PtvZ+/FwMA4jXF1g90/c3+g2VWevBcDAwPjfrv7YK4NImc/HwYGBkYe0s2u3fZHwcDAwFhJTZPjzopuH8zFMTAwHsjIU83///sj/Q0MDIxHMd7lagPBWTuzPhUGBsbWjFnRf6VIl4Ses/NgYGCcwPjbMn3bKkjYdS8UAwNjI8bKwMTsyRkg+WkwMDD2Y8zEydXZFs7yhsQP+2NgYBzAyAtneTtzJaCsS3gYGBhbM/ICWZLcrhf3V0bNMDAwdmVEgVdcGmsT3WT/OjTEwMA4gNE2HfNvZ8ctym0YGBibMpJHk9evtCeT674OEDEwMDZl5ElpPmDRltWWGgwYGBibMvKS/azd2BbaZgMZGBgYezPaMYj2k3ZEI7l8MTAwTmOspKB50vs5AAYGxgmMlVR2BZ83MuugEAMDY1NGEScuFOxm7cm8qIeBgXEO4z1aLS9vWBb7YGBgHMOYjYjlbYO8qdD2KzEwMHZlzC7Wtm2Zt0WHO2BgYGzNmKWpnwgN2/GyuhOLgYHxcMbKSFYb/OUJbd1mwMDAOICRX3z5lFmLn139GBgYGG10mY9ltCnrL1QMDAyMIMhr2fnlGz2JgYFxAGM9BZ2NeeVXKgYGxsmMdsShBbTjGisnwcDA2I7xBT918C4AMjmsAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼 去哪里了！！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'ヽ(✿ﾟ▽ﾟ)ノ欢迎回来！';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

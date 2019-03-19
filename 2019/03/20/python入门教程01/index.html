@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Python 3 入门教程01 | iScenery | 岁月漫长 要心地善良</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="入门教程,Python3">
+    <meta name="description" content="Pyhton 简介Python的诞生和发展 Python是荷兰著名计算机程序员Guido van Rossum在1989年圣诞节期间，为了打发无聊的圣诞节而编写的一个编程语言。   Python就为我们提供了非常完善的基础代码库，覆盖了网络、文件、GUI、数据库、文本等大量内容，被形象地称作“内置电池（batteries included）”。用Python开发，许多功能不必从零编写，直接使用现成">
+<meta name="keywords" content="入门教程,Python3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python 3 入门教程01">
+<meta property="og:url" content="http://WangLiangsen.github.io/2019/03/20/python入门教程01/index.html">
+<meta property="og:site_name" content="iScenery">
+<meta property="og:description" content="Pyhton 简介Python的诞生和发展 Python是荷兰著名计算机程序员Guido van Rossum在1989年圣诞节期间，为了打发无聊的圣诞节而编写的一个编程语言。   Python就为我们提供了非常完善的基础代码库，覆盖了网络、文件、GUI、数据库、文本等大量内容，被形象地称作“内置电池（batteries included）”。用Python开发，许多功能不必从零编写，直接使用现成">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-19T17:13:28.799Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python 3 入门教程01">
+<meta name="twitter:description" content="Pyhton 简介Python的诞生和发展 Python是荷兰著名计算机程序员Guido van Rossum在1989年圣诞节期间，为了打发无聊的圣诞节而编写的一个编程语言。   Python就为我们提供了非常完善的基础代码库，覆盖了网络、文件、GUI、数据库、文本等大量内容，被形象地称作“内置电池（batteries included）”。用Python开发，许多功能不必从零编写，直接使用现成">
+    
+        <link rel="alternate" type="application/atom+xml" title="iScenery" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Scenery</h5>
+          <a href="mailto:wangliangsen@outlook.com" title="wangliangsen@outlook.com" class="mail">wangliangsen@outlook.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/">
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories">
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags">
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://music.163.com/#/user/home?id=266630369" target="_blank">
+                <i class="icon icon-lg icon-music"></i>
+                音乐
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives">
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/wangliangsen" target="_blank">
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/5594662742/" target="_blank">
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Python 3 入门教程01</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Python 3 入门教程01</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-03-19T16:18:59.000Z" itemprop="datePublished" class="page-time">
+  2019-03-20
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/">学习笔记</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/Pyhton3/">Pyhton3</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Pyhton-简介"><span class="post-toc-number">1.</span> <span class="post-toc-text">Pyhton 简介</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Python的诞生和发展"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Python的诞生和发展</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Python的优缺点"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Python的优缺点</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Python的安装"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Python的安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#交互模式和命令行模式"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">交互模式和命令行模式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#编写第一个Python程序"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">编写第一个Python程序</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Python编程基础"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">Python编程基础</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-python入门教程01" class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Python 3 入门教程01</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-03-20 00:18:59" datetime="2019-03-19T16:18:59.000Z" itemprop="datePublished">2019-03-20</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/">学习笔记</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/Pyhton3/">Pyhton3</a></li></ul></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Pyhton-简介"><a href="#Pyhton-简介" class="headerlink" title="Pyhton 简介"></a>Pyhton 简介</h1><h2 id="Python的诞生和发展"><a href="#Python的诞生和发展" class="headerlink" title="Python的诞生和发展"></a>Python的诞生和发展</h2><ul>
+<li>Python是荷兰著名计算机程序员Guido van Rossum在1989年圣诞节期间，为了打发无聊的圣诞节而编写的一个编程语言。  </li>
+<li>Python就为我们提供了非常完善的基础代码库，覆盖了网络、文件、GUI、数据库、文本等大量内容，被形象地称作“内置电池（batteries included）”。用Python开发，许多功能不必从零编写，直接使用现成的即可。  </li>
+<li>除了内置的库外，Python还有大量的第三方库，也就是别人开发的，供你直接使用的东西。当然，如果你开发的代码通过很好的封装，也可以作为第三方库给别人使用。  </li>
+<li>许多大型网站就是用Python开发的，例如YouTube、Instagram，还有国内的豆瓣。很多大公司，包括Google、Yahoo等，甚至NASA（美国航空航天局）都大量地使用Python。</li>
+</ul>
+<h2 id="Python的优缺点"><a href="#Python的优缺点" class="headerlink" title="Python的优缺点"></a>Python的优缺点</h2><ul>
+<li>+适合开发网络应用，包括网站、后台服务、系统管理员需要的脚本任务</li>
+<li>-运行速度慢，因为Python是解释型语言</li>
+<li>-代码不能加密。如果要发布你的Python程序，实际上就是发布源代码</li>
+</ul>
+<h2 id="Python的安装"><a href="#Python的安装" class="headerlink" title="Python的安装"></a>Python的安装</h2><p>Python是跨平台的，它可以运行在Windows、Mac和各种Linux/Unix系统上。在Windows上写Python程序，放到Linux上也能够运行<br>目前，Python有两个版本，一个是2.x版，一个是3.x版，这两个版本是不兼容的。但3.x版越来越普及。</p>
+<ul>
+<li>从Python的官方网站下载Python 3.7对应的64位安装程序或32位安装程序<br><a href="https://www.Python.org/downloads/" target="_blank" rel="noopener">https://www.Python.org/downloads/</a></li>
+<li>特别注意安装时勾选<code>Add Python 3.7 to PATH</code></li>
+<li>Windows + R，输入Python，如果出现 <code>&gt;&gt;&gt;</code> 表示Python安装成功<blockquote>
+<p>Python解释器<br>当我们编写Python代码时，我们得到的是一个包含Python代码的以<code>.py</code>为扩展名的文本文件。要运行代码，就需要Python解释器去执行.py文件。<br>常见的各种Python解释器：</p>
+<ul>
+<li>CPython<br>当我们从Python官方网站下载并安装好Python 3.x后，我们就直接获得了一个官方版本的解释器：CPython。这个解释器是用C语言开发的，所以叫CPython  </li>
+<li>IPython<br>IPython只是在交互方式上有所增强，但是执行Python代码的功能和CPython是完全一样的<br>CPython用<code>&gt;&gt;&gt;</code>作为提示符，而IPython用<code>In [序号]:</code>作为提示符。  </li>
+<li>PyPy<br>PyPy采用JIT技术，对Python代码进行动态编译（注意不是解释），所以可以显著提高Python代码的执行速度。  </li>
+<li>Jython<br>Jython是运行在Java平台上的Python解释器，可以直接把Python代码编译成Java字节码执行  </li>
+<li>IronPython<br>IronPython和Jython类似，只不过IronPython是运行在微软.Net平台上的Python解释器，可以直接把Python代码编译成.Net的字节码。</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h2 id="交互模式和命令行模式"><a href="#交互模式和命令行模式" class="headerlink" title="交互模式和命令行模式"></a>交互模式和命令行模式</h2><p>在命令行模式下，可以执行Python进入Python交互式环境，也可以执行Python hello.py运行一个.py文件。<br>下面是一个命令行模式和交互模式转换的例子<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">C:\&gt;Python</span><br><span class="line">Python 3.7.2 (tags/v3.7.2:9a3ffc0492, Dec 23 2018, 23:09:28) [MSC v.1916 64 bit (AMD64)] on win32</span><br><span class="line">Type "help", "copyright", "credits" or "license" for more information.</span><br><span class="line"><span class="meta">&gt;</span>&gt;&gt; exit()</span><br></pre></td></tr></table></figure></p>
+<p>Python交互模式的代码是输入一行，执行一行，而命令行模式下直接运行.py文件是一次性执行该文件内的所有代码。可见，Python交互模式主要是为了调试Python代码用的，也便于初学者学习，它不是正式运行Python代码的环境！</p>
+<h2 id="编写第一个Python程序"><a href="#编写第一个Python程序" class="headerlink" title="编写第一个Python程序"></a>编写第一个Python程序</h2><p>windows下打开IDLE –&gt; file –&gt; new file<br>在新窗口中输入<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'hello world!'</span>)</span><br><span class="line">```  </span><br><span class="line">保存后，按`F5`执行，此时原来的命令行窗口会显示</span><br><span class="line">``` Python</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span></span><br><span class="line">================== RESTART: C:\Users\scenery\Desktop\hello.py ==================</span><br><span class="line">hello world!</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>用Python开发程序，完全可以一边在文本编辑器里写代码，一边开一个交互式命令窗口，在写代码的过程中，把部分代码粘到命令行去验证，事半功倍！</p>
+</blockquote>
+<h2 id="Python编程基础"><a href="#Python编程基础" class="headerlink" title="Python编程基础"></a>Python编程基础</h2><ul>
+<li>Python的代码采用缩进方式</li>
+<li>以<code>#</code>开头的语句是注释</li>
+<li>以冒号<code>:</code>结尾的语句，视为缩进代码块</li>
+<li>缩进应该始终坚持使用4个空格</li>
+<li>输入输出函数print(); input();</li>
+</ul>
+<blockquote>
+<p>用法举例<br><code>print(&#39;The quick brown fox&#39;, &#39;jumps over&#39;, &#39;the lazy dog&#39;)</code><br><code>name = input(&#39;please enter your name: &#39;)</code></p>
+</blockquote>
+<p>注意：input()返回的数据类型是<code>str</code>，str不能直接和整数比较或运算，必须先把str转换成整数。Python提供了<code>int()</code>函数来完成这件事情：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s = input(<span class="string">'birth: '</span>)</span><br><span class="line">birth = int(s)</span><br></pre></td></tr></table></figure></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-03-19T17:13:28.799Z" itemprop="dateUpdated">2019-03-20 01:13:28</time>
+</span><br>
+
+
+        
+        曾经的学霸，现在的学渣，以及在自我改变的道路上百折不挠的struggler!
+        
+    </div>
+    
+    <footer>
+        <a href="http://WangLiangsen.github.io">
+            <img src="/img/avatar.jpg" alt="Scenery">
+            Scenery
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python3/">Python3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/入门教程/">入门教程</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://WangLiangsen.github.io/2019/03/20/python入门教程01/&title=《Python 3 入门教程01》 — iScenery&pic=http://WangLiangsen.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://WangLiangsen.github.io/2019/03/20/python入门教程01/&title=《Python 3 入门教程01》 — iScenery&source=WangLiangsen's Blog" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://WangLiangsen.github.io/2019/03/20/python入门教程01/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Python 3 入门教程01》 — iScenery&url=http://WangLiangsen.github.io/2019/03/20/python入门教程01/&via=http://WangLiangsen.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://WangLiangsen.github.io/2019/03/20/python入门教程01/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/03/20/python入门教程02/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Python 3 入门教程02</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/03/19/A Countdown/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">A Countdown</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您的打赏！
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Scenery &copy; 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://WangLiangsen.github.io/2019/03/20/python入门教程01/&title=《Python 3 入门教程01》 — iScenery&pic=http://WangLiangsen.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://WangLiangsen.github.io/2019/03/20/python入门教程01/&title=《Python 3 入门教程01》 — iScenery&source=WangLiangsen's Blog" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://WangLiangsen.github.io/2019/03/20/python入门教程01/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Python 3 入门教程01》 — iScenery&url=http://WangLiangsen.github.io/2019/03/20/python入门教程01/&via=http://WangLiangsen.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://WangLiangsen.github.io/2019/03/20/python入门教程01/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3awW6EMAxFUf7/p6nUbYdwn81UIr5ZjWhEcli4TuzjwOP8HVdP+F/PP2P9/OEhQ4aM1zLO5eDbSpF83fUcGTJkzGGsg+x6o+vo11mLzJchQ4YMntLxN3SSThkyZMiopXfkRJmePWXIkCGjdohtLYPnfP0sLkOGjBcy0sLAf/7+Yn1DhgwZL2GcjXGVIPbfE79BhgwZWzPIcTQNxJ2Eb31IvtmhDBkyNmXwANpJFp89+n6YL0OGjAEMfpX/VBNYpyDx4bkMGTLGMGrX92SL/KPwNPEy4MqQIWMAg4ROEqDJ8/Qoe1ODlSFDxqaMzsK1oNxprYg7R2TIkLEFIy1Mpknks2XLy48uQ4aMAYw0aasVI9NWsOCzypAhY2sGT+B42pcGzbR4eflOGTJkDGPwkLpePm2qqBUYZMiQMY1BnqShmRxx+RwZMmRMY/BQ22kL481h6aeRIUPGBEbascBvt9LrOc5rJYsyZMh4OWO9WHpkTS/60zLDTc+IDBkytmPw0MbTPj6ff46bfwMyZMgYwEANWOFVGtlinypDhowJjHRbtd+t2kWtOCFDhowtGGc40nu7WtNGOkeGDBl7M2qtErzkmVLTMoAMGTLmMNIgm7ZipMWGYsCVIUPGAEatYEDewNsy0kPswTchQ4aMYYzOlRlPIoPbQRkyZMjAZU5+xCVpZeucLUOGjE0ZfJnvHXfTN8uQIWMOo18YIGlcLXw/kDLKkCHj3YwfakzRP2Vqza4AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼 去哪里了！！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'ヽ(✿ﾟ▽ﾟ)ノ欢迎回来！';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
